@@ -10,6 +10,7 @@ gem 'pg', '~> 1.1', '>= 1.1.4'
 gem 'dotenv-rails'
 gem 'rake', '~> 13.0'
 
+gem 'binding_of_caller'
 
 gem 'test-unit', '~> 3.3', '>= 3.3.4'
 gem 'rake-compiler-dock', '~> 0.7.2'

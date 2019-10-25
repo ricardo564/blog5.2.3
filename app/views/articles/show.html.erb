@@ -1,13 +1,52 @@
-<div class="mt-5 border p-2">
-  <p>
-    <strong>Title:</strong>
-    <%= @article.title %>
-  </p>
+<div class="container  mt-1 p-0">
+<div class="row">
 
-  <p>
-    <strong>Text:</strong>
-    <%= @article.text %>
-  </p>
+  <div class="col-md-6 p-1">
+    <div class="card mb-1 shadow-sm">
+      <div class="card-body">
+        <p class="card-title">
+          <strong class="card-title">Title:</strong>
+          <%= @article.title %>
+        </p>
+
+        <p class="card-text">
+          <strong class=""card-text>Text:</strong>
+          <%= @article.text %>
+        </p>
+      </div>
+    </div>
+
+    <div class="shadow-sm p-1 mt-1">
+      <h2 class="display-5 card-header">Add a comment:</h2>
+
+      <%= form_with(model: [@article, @article.comments.build], local:true) do |form|%>
+        <p>
+          <%= form.label :commenter  ,{:class => " "} %>
+          <%= form.text_field :commenter ,{:class => "form-control "} %>
+        </p>
+        <p>
+          <%= form.label :body ,{:class => " "} %>
+          <%= form.text_area :body ,{:class => "form-control "}  %>
+        </p>
+        <p>
+          <%= form.submit 'Create Comment', :class => "btn btn-outline-success" %>
+        </p>
+      <% end %>
+    </div>
+
+    <%= link_to 'Back', articles_path, :class => "btn btn-lg btn-outline-info mt-1"  %>
+
+  </div>
+  <div class="col-md-6 p-1 shadow-sm">
+      <%= render @article.comments %>
+  </div>
+
 </div>
-<%= link_to 'Show', article_path(@article), :class => "btn btn-outline-success" %> |
-<%= link_to 'Back', articles_path, :class => "btn btn-outline-info"  %>
+
+
+
+
+
+
+</div>
+
