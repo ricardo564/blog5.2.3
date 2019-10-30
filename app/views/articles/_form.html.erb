@@ -17,16 +17,17 @@
 
     <p>
       <%= form.label :title %><br>
-      <%= form.text_field :title ,{:class => "form-control "}  %>
+      <%= form.text_field :title ,{:class => "form-control"}  %>
     </p>
 
     <p>
       <%= form.label :text %><br>
-      <%= form.text_area :text ,{:class => "form-control "}  %>
+      <%= form.hidden_field :text, id: :post_body %>
+      <trix-editor input="post_body"></trix-editor>
     </p>
 
     <p >
-      <%= form.submit 'Create Article', :class => "btn btn-outline-success"  %>
+      <%= form.submit class: "btn btn-outline-success"  %>
     </p>
 
 <% end %>

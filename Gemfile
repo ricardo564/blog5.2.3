@@ -20,6 +20,9 @@ gem 'rake-compiler', '~> 1.0', '>= 1.0.8'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
+#Editor de texto avançado
+gem 'trix-rails', require: 'trix'
+
 #https://youtu.be/wbZ6yrVxScM Build your first Rails app - blog with comments (tutorial)
 
 gem 'better_errors', '~> 2.5', '>= 2.5.1'
