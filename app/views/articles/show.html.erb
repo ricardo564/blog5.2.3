@@ -16,29 +16,16 @@
       </div>
     </div>
 
-    <div class="shadow-sm p-1 mt-1">
-      <h2 class="display-5 card-header">Add a comment:</h2>
+   <div class="shadow-sm p-1 mt-1">
 
-      <%= form_with(model: [@article, @article.comments.build], local:true) do |form|%>
-        <p>
-          <%= form.label :commenter  ,{:class => " "} %>
-          <%= form.text_field :commenter ,{:class => "form-control "} %>
-        </p>
-        <p>
-          <%= form.label :body ,{:class => " "} %>
-          <%= form.text_area :body ,{:class => "form-control "}  %>
-        </p>
-        <p>
-          <%= form.submit 'Create Comment', :class => "btn btn-outline-success" %>
-        </p>
-      <% end %>
-    </div>
+     <%= render 'comments/form' %>
 
-    <%= link_to 'Back', articles_path, :class => "btn btn-lg btn-outline-info mt-1"  %>
+     <%= link_to 'Back', articles_path, :class => "btn btn-lg btn-outline-info mt-1"  %>
 
   </div>
   <div class="col-md-6 p-1 shadow-sm">
-      <%= render @article.comments %>
+    <h2 class="card-header mt-1">Comments</h2>
+    <%= render @article.comments %>
   </div>
 
 </div>

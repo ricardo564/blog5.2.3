@@ -1,0 +1,16 @@
+<h2 class="display-5 card-header">Add a comment:</h2>
+
+<%= form_with(model: [@article, @article.comments.build], local:true) do |form|%>
+  <p>
+    <%= form.label :commenter  ,{:class => " "} %>
+    <%= form.text_field :commenter ,{:class => "form-control "} %>
+  </p>
+  <p>
+    <%= form.label :body ,{:class => " "} %>
+    <%= form.text_area :body ,{:class => "form-control "}  %>
+  </p>
+  <p>
+    <%= form.submit 'Create Comment', :class => "btn btn-outline-success" %>
+  </p>
+<% end %>
+</div>
