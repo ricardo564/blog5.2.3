@@ -1,5 +1,13 @@
-<h1>New Article</h1>
+<div class="card container col-6 mt-1 shadow-sm">
 
-<%= render 'form' %>
+  <div class="card-body">
 
-<%= link_to 'Back', articles_path %>
+  <h1 class="card-title"><strong>New Article</strong> </h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Back', articles_path, :class => "btn btn-outline-info" %>
+
+  </div>
+
+</div>

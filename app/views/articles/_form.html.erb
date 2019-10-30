@@ -15,18 +15,18 @@
     </div>
   <% end %>
 
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+    <p>
+      <%= form.label :title %><br>
+      <%= form.text_field :title ,{:class => "form-control "}  %>
+    </p>
 
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
+    <p>
+      <%= form.label :text %><br>
+      <%= form.text_area :text ,{:class => "form-control "}  %>
+    </p>
 
-  <p>
-    <%= form.submit %>
-  </p>
+    <p >
+      <%= form.submit 'Create Article', :class => "btn btn-outline-success"  %>
+    </p>
 
 <% end %>
