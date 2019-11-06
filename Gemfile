@@ -1,14 +1,16 @@
-source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+source 'https://rubygems.org/'
+git_source(:github) { |repo| "https://github.com/#%7Brepo%7D.git" }
 
-ruby '2.5.7'
+ruby '2.5.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 #  database for Active Record https://medium.com/@noordean/setting-up-postgresql-with-rails-application-357fe5e9c28
-gem 'pg', '~> 1.1', '>= 1.1.4'
 gem 'dotenv-rails'
 gem 'rake', '~> 13.0'
+
+# Use mysql as the database for Active Record
+gem 'mysql2', '>= 0.5.2', '< 0.6.0'
 
 gem 'binding_of_caller'
 
