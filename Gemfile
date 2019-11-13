@@ -1,7 +1,16 @@
 source 'https://rubygems.org/'
 git_source(:github) { |repo| "https://github.com/#%7Brepo%7D.git" }
 
-ruby '2.5.5'
+#upload de imagens
+gem 'carrierwave', '~> 0.11.2'
+gem 'mini_magick'
+
+#icone pro user
+gem 'gravtastic'
+gem 'active_record_query_trace'
+gem 'better_errors'
+gem 'colorize'
+gem 'pry-byebug'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -27,7 +36,6 @@ gem 'trix-rails', require: 'trix'
 
 #https://youtu.be/wbZ6yrVxScM Build your first Rails app - blog with comments (tutorial)
 
-gem 'better_errors', '~> 2.5', '>= 2.5.1'
 gem 'simple_form', '~> 5.0'
 
 # Use Puma as the app server
