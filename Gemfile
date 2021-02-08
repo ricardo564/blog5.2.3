@@ -2,7 +2,7 @@ source 'https://rubygems.org/'
 git_source(:github) { |repo| "https://github.com/#%7Brepo%7D.git" }
 
 #upload de imagens
-gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave', '~> 1.3.2'
 gem 'mini_magick'
 
 #icone pro user
